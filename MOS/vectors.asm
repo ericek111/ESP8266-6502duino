@@ -1,0 +1,30 @@
+OSICOUNTER		= $FFAD   ; OSICOUNTER *NOT BBC* - Get icounter value to $YYXX.
+OSREBOOT		= $FFB0   ; OSREBOOT *NOT BBC* - Reset emulator.
+OSPRINT			= $FFB3   ; OSPRINT *NOT BBC* - print NUL terminated string from location in $YYXX.
+OSPHEX			= $FFB6   ; OSPHEX  *NOT BBC* - print 2 byte hex from value in A
+
+OSRDSC			= $FFB9   ; OSRDSC - Read a byte from screen or sideways ROM/RAM
+OSVDU			= $FFBC   ; OSVDU  - Raw VDU entry point
+OSEVEN			= $FFBF   ; OSEVEN - Generate an event
+GSINIT			= $FFC2   ; GSINIT - Initialise string reading
+GSREAD			= $FFC5   ; GSREAD - Read a character from a string
+NVRDCH			= $FFC8   ; NVRDCH - Nonvectored OSRDCH
+NVWRCH			= $FFCB   ; NVWRCH - Nonvectored OSWRCH
+OSFIND			= $FFCE   ; OSFIND - Open or close a file
+OSGBPB			= $FFD1   ; OSGBPB - Read or write multiple bytes
+OSBPUT			= $FFD4   ; OSBPUT - Put a single byte to a stream
+OSBGET			= $FFD7   ; OSBGET - Get a single byte from a stream
+OSARGS			= $FFDA   ; OSARGS - Read information on open files
+OSFILE			= $FFDD   ; OSFILE - Perform actions on whole files
+OSRDCH			= $FFE0   ; OSRDCH - Read character from input stream
+OSASCI			= $FFE3   ; OSASCI - Write ASCII character to output stream
+OSNEWL			= $FFE7   ; OSNEWL - Write LF/CR to output stream
+OSWRCR			= $FFEC   ; OSWRCR - Write CR to output stream
+OSWRCH			= $FFEE   ; OSWRCH - Write character to output stream
+OSWORD			= $FFF1   ; OSWORD - Perform actions in control block
+OSBYTE			= $FFF4   ; OSBYTE - Perform actions in registers
+OSCLI			= $FFF7   ; OSCLI  - Interpret command string
+
+NMIV			= $FFFA   ; NMIV   - NMI vector
+RESETV			= $FFFC   ; RESETV - RESET vector
+IRQV			= $FFFE   ; IRQV   - IRQ vector

@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+die "Usage: $0 baseaddr_hex arrayname < infile.bin > outfile.ino\n" 
+	unless (@ARGV == 2);
+my ($base, $arrayname) = @ARGV;
+
+my @lines = ("    ");
+my $len = 0;
+while (defined(my $c = getc(STDIN)))
+{
+	$lines[$#lines] .= sprintf("0x%02x, ", unpack("C", $c));
+	push(@lines, "    ") if (length($lines[$#lines]) > 70);
+	$len++;
+}
+pop(@lines) if ($lines[$#lines] =~ /^\s*$/);
+$lines[$#lines] =~ s/, $//;
+
+printf "const word %s_BASE = 0x%04x;\n", $arrayname, hex($base);
+printf "byte ICACHE_RODATA_ATTR %s[%d] = {\n", $arrayname, $len;
+map { print "$_\n" } @lines;
+print "};\n";

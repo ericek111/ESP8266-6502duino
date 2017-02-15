@@ -1,0 +1,32 @@
+This is a very quick & dirty packaging of my 6502 emulation for ESP8266
+boards. It's designed for the ESP8266 Arduino IDE.
+
+Here's what it contains:
+
+makeheader - A perl script for converting a binary ROM image into
+          an area of emulated ROM in the Arduino directory.
+
+em6502/ - this is an Arduino project for the emulator. It needs one
+          file adding, BASIC.h, which can be generated from a BBC BASIC 2
+		  ROM image using the perl script, "makeheader", as follows:
+
+		    perl makeheader 8000 BASIC < BASIC.ROM > em6502/BASIC.h
+
+          I'm not distributing BASIC.h as it's presumably still covered by
+		  copyright. You'll need to find this somewhere yourself.
+
+MOS/    - this is my little OS image, providing just enough BBC MOS
+          emulation to run the BBC BASIC image. You need the "ca65"
+		  assembler to build it, available as part of cc65:
+		    http://www.cc65.org/
+		  Once again, to get the built MOS ROM into the emulator, you
+		  need to convert it to a C header file, MOS.h, in the em6502
+		  directory using:
+
+		    perl makeheader fc00 MOS < MOS/mos.bin > em6502/MOS.h
+
+		  N.B. You only need to do this if you've made changes to my
+		  tiny MOS. A valid MOS.h header is already present in em6502/
+
+Apart from that, Read the Source, Luke!
+

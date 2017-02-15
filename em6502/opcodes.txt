@@ -1,0 +1,152 @@
+00	BRK
+01	ORA	addr_zp_indexed_indirect
+02	COP
+05	ORA	addr_zp
+06	ASL	addr_zp
+08	PHP	
+09	ORA	addr_immediate
+0A	ASL	addr_accumulator
+0D	ORA	addr_absolute
+0E	ASL	addr_absolute
+10	BPL	addr_relative
+11	ORA	addr_zp_indirect_indexed
+15	ORA	addr_zp_indexed_x
+16	ASL	addr_zp_indexed_x
+18	CLC	
+19	ORA	addr_absolute_indexed_y
+1D	ORA	addr_absolute_indexed_x
+1E	ASL	addr_absolute_indexed_x
+20	JSR	addr_absolute
+21	AND	addr_zp_indexed_indirect
+24	BIT	addr_zp
+25	AND	addr_zp
+26	ROL	addr_zp
+28	PLP	
+29	AND	addr_immediate
+2A	ROL	addr_accumulator
+2C	BIT	addr_absolute
+2D	AND	addr_absolute
+2E	ROL	addr_absolute
+30	BMI	addr_relative
+31	AND	addr_zp_indirect_indexed
+35	AND	addr_zp_indexed_x
+36	ROL	addr_zp_indexed_x
+38	SEC	
+39	AND	addr_absolute_indexed_y
+3D	AND	addr_absolute_indexed_x
+3E	ROL	addr_absolute_indexed_x
+40	RTI	
+41	EOR	addr_zp_indexed_indirect
+45	EOR	addr_zp
+46	LSR	addr_zp
+48	PHA	
+49	EOR	addr_immediate
+4A	LSR	addr_accumulator
+4C	JMP	addr_absolute
+4D	EOR	addr_absolute
+4E	LSR	addr_absolute
+50	BVC	addr_relative
+51	EOR	addr_zp_indirect_indexed
+55	EOR	addr_zp_indexed_x
+56	LSR	addr_zp_indexed_x
+58	CLI	
+59	EOR	addr_absolute_indexed_y
+5D	EOR	addr_absolute_indexed_x
+5E	LSR	addr_absolute_indexed_x
+60	RTS	
+61	ADC	addr_zp_indexed_indirect
+65	ADC	addr_zp
+66	ROR	addr_zp
+68	PLA	
+69	ADC	addr_immediate
+6A	ROR	addr_accumulator
+6C	JMP	addr_indirect
+6D	ADC	addr_absolute
+6E	ROR	addr_absolute
+70	BVS	addr_relative
+71	ADC	addr_zp_indirect_indexed
+75	ADC	addr_zp_indexed_x
+76	ROR	addr_zp_indexed_x
+78	SEI	
+79	ADC	addr_absolute_indexed_y
+7D	ADC	addr_absolute_indexed_x
+7E	ROR	addr_absolute_indexed_x
+81	STA	addr_zp_indexed_indirect
+84	STY	addr_zp
+85	STA	addr_zp
+86	STX	addr_zp
+88	DEY	
+8A	TXA	
+8C	STY	addr_absolute
+8D	STA	addr_absolute
+8E	STX	addr_absolute
+90	BCC	addr_relative
+91	STA	addr_zp_indirect_indexed
+94	STY	addr_zp_indexed_x
+95	STA	addr_zp_indexed_x
+96	STX	addr_zp_indexed_y
+98	TYA	
+99	STA	addr_absolute_indexed_y
+9A	TXS	
+9D	STA	addr_absolute_indexed_x
+A0	LDY	addr_immediate
+A1	LDA	addr_zp_indexed_indirect
+A2	LDX	addr_immediate
+A4	LDY	addr_zp
+A5	LDA	addr_zp
+A6	LDX	addr_zp
+A8	TAY	
+A9	LDA	addr_immediate
+AA	TAX	
+AC	LDY	addr_absolute
+AD	LDA	addr_absolute
+AE	LDX	addr_absolute
+B0	BCS	addr_relative
+B1	LDA	addr_zp_indirect_indexed
+B4	LDY	addr_zp_indexed_x
+B5	LDA	addr_zp_indexed_x
+B6	LDX	addr_zp_indexed_y
+B8	CLV	
+B9	LDA	addr_absolute_indexed_y
+BA	TSX	
+BC	LDY	addr_absolute_indexed_x
+BD	LDA	addr_absolute_indexed_x
+BE	LDX	addr_absolute_indexed_y
+C0	CPY	addr_immediate
+C1	CMP	addr_zp_indexed_indirect
+C4	CPY	addr_zp
+C5	CMP	addr_zp
+C6	DEC	addr_zp
+C8	INY	
+C9	CMP	addr_immediate
+CA	DEX	
+CC	CPY	addr_absolute
+CD	CMP	addr_absolute
+CE	DEC	addr_absolute
+D0	BNE	addr_relative
+D1	CMP	addr_zp_indirect_indexed
+D5	CMP	addr_zp_indexed_x
+D6	DEC	addr_zp_indexed_x
+D8	CLD	
+D9	CMP	addr_absolute_indexed_y
+DD	CMP	addr_absolute_indexed_x
+DE	DEC	addr_absolute_indexed_x
+E0	CPX	addr_immediate
+E1	SBC	addr_zp_indexed_indirect
+E4	CPX	addr_zp
+E5	SBC	addr_zp
+E6	INC	addr_zp
+E8	INX	
+E9	SBC	addr_immediate
+EA	NOP
+EC	CPX	addr_absolute
+ED	SBC	addr_absolute
+EE	INC	addr_absolute
+F0	BEQ	addr_relative
+F1	SBC	addr_zp_indirect_indexed
+F5	SBC	addr_zp_indexed_x
+F6	INC	addr_zp_indexed_x
+F8	SED	
+F9	SBC	addr_absolute_indexed_y
+FD	SBC	addr_absolute_indexed_x
+FE	INC	addr_absolute_indexed_x
